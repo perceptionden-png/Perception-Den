@@ -8,10 +8,15 @@ Serve this directory with any static HTTP server. For example, from this directo
 
 ## Included
 
-- Large project covers, pale lavender surfaces, navy accents, bottom navigation.
+- Large project covers, a dark studio theme, soft blue accents, and bottom navigation.
 - Project search, category filters, creative role filters, and saved projects.
 - Creative discovery and illustrative portfolios.
-- Local project creation, profile editing, and portfolio links.
+- My Projects in the portfolio, with project creation, editing, and confirmed deletion.
+- One project record shared across portfolio and discovery; edits preserve collaborators and media.
+- Current collaborator credits with roles and optional portfolio links.
+- Work in progress gallery: images, videos, references, notes, and collaborator tags, added by URL.
+- Direct MP4/WebM/OGV video playback; external video pages open at their source.
+- Profile editing and portfolio links.
 - Join-request and project-invitation drafts with duplicate prevention and removal.
 - Browser-local persistence. Sample community records are fictional.
 
@@ -26,3 +31,4 @@ The frontend files (`index.html`, `style.css`, `app.js`, and `covers/`) can be s
 Sample project covers are original bundled SVG illustrations. The app uses system font fallbacks and requires no external assets. They illustrate fictional projects and are not portfolio credits.
 
 The previous app source remains preserved in the original local workspace for backend migration. It is not included in this frontend repository.
+
