@@ -1,10 +1,14 @@
 # Perception Den
 
-A standalone, responsive frontend for project makers and creative collaborators. Open access: no ChatGPT account or platform session is required.
+A standalone, responsive frontend for project makers and creative collaborators. Uses a standalone Perception Den preview account; no ChatGPT account is required.
 
 ## Preview
 
 Serve this directory with any static HTTP server. For example, from this directory run `python -m http.server 4173`, then visit http://localhost:4173. No build or dependency installation is needed.
+
+## Try the account flow
+
+Open the site, choose Create account, and enter a username, email, and test password. Sign in later with username and password. Email verification is planned; no email is sent. Accounts and their workspaces are saved on this device only. The optional sign-up checkbox brings existing local projects into the first importing account. Use Sign out in the app header to test another account.
 
 ## Included
 
@@ -26,11 +30,11 @@ Serve this directory with any static HTTP server. For example, from this directo
 
 ## Backend boundary
 
-This is a working frontend prototype. It does not send invitations, authenticate users, synchronize devices, upload files to a server, or expose the previous app's private records. Browser storage can be cleared and must not hold sensitive data. Real accounts, project ownership, server validation, moderation, media storage, and request/invitation delivery belong to the next backend phase. The original app's authenticated APIs remain in the parent workspace for migration reference.
+This is a working frontend prototype. It does not send invitations, provide production authentication, synchronize devices, upload files to a server, or expose the previous app's private records. Browser storage can be cleared and must not hold sensitive data. Real accounts, project ownership, server validation, moderation, media storage, and request/invitation delivery belong to the next backend phase. The original app's authenticated APIs remain in the parent workspace for migration reference.
 
 ## Hosting
 
-The frontend files (`index.html`, `style.css`, `app.js`, and `covers/`) can be served by GitHub Pages or any static host. GitHub repository storage by itself does not publish a live site. In GitHub repository Settings → Pages, choose Deploy from a branch, `main`, `/ (root)` after this frontend has been copied to the repository root.
+The frontend files (`index.html`, `style.css`, `app.js`, `account.js`, and `covers/`) can be served by GitHub Pages or any static host. GitHub repository storage by itself does not publish a live site. In GitHub repository Settings → Pages, choose Deploy from a branch, `main`, `/ (root)` after this frontend has been copied to the repository root.
 
 Sample project covers are original bundled SVG illustrations. The app uses system font fallbacks and requires no external assets. They illustrate fictional projects and are not portfolio credits.
 
@@ -40,3 +44,7 @@ The previous app source remains preserved in the original local workspace for ba
 ## Messaging and cover storage
 
 Conversations happen on the external destination configured under Primary Messaging. Perception Den keeps request and invitation drafts only. Social links do not connect or authenticate social accounts. Covers selected from the device are decoded, resized to at most 1600 pixels, and stored as JPEG data in browser storage. A failed storage write keeps the previous project intact. Selecting a cover does not upload it to a server. Project work media still uses URLs.
+
+## Backend readiness
+
+See [ACCOUNT_INTEGRATION.md](ACCOUNT_INTEGRATION.md) for the preview provider contract, account data ownership, and the remaining Supabase implementation work.
