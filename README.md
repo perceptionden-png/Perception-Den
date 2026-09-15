@@ -16,13 +16,17 @@ Serve this directory with any static HTTP server. For example, from this directo
 - Current collaborator credits with roles and optional portfolio links.
 - Work in progress gallery: images, videos, references, notes, and collaborator tags, added by URL.
 - Direct MP4/WebM/OGV video playback; external video pages open at their source.
-- Profile editing and portfolio links.
+- Profile editing with a searchable, multi-select role bubble menu using every discovery role.
+- Profile and project social media links, plus a primary external messaging destination.
+- Whole-card project navigation and Edit preview controls.
+- Drag-and-drop or file-picker cover images (JPG, PNG, WebP, 10 MB input limit), resized and saved locally.
+- Portfolio links.
 - Join-request and project-invitation drafts with duplicate prevention and removal.
 - Browser-local persistence. Sample community records are fictional.
 
 ## Backend boundary
 
-This is a working frontend prototype. It does not send invitations, authenticate users, synchronize devices, upload files, or expose the previous app's private records. Browser storage can be cleared and must not hold sensitive data. Real accounts, project ownership, server validation, moderation, media storage, and request/invitation delivery belong to the next backend phase. The original app's authenticated APIs remain in the parent workspace for migration reference.
+This is a working frontend prototype. It does not send invitations, authenticate users, synchronize devices, upload files to a server, or expose the previous app's private records. Browser storage can be cleared and must not hold sensitive data. Real accounts, project ownership, server validation, moderation, media storage, and request/invitation delivery belong to the next backend phase. The original app's authenticated APIs remain in the parent workspace for migration reference.
 
 ## Hosting
 
@@ -32,3 +36,7 @@ Sample project covers are original bundled SVG illustrations. The app uses syste
 
 The previous app source remains preserved in the original local workspace for backend migration. It is not included in this frontend repository.
 
+
+## Messaging and cover storage
+
+Conversations happen on the external destination configured under Primary Messaging. Perception Den keeps request and invitation drafts only. Social links do not connect or authenticate social accounts. Covers selected from the device are decoded, resized to at most 1600 pixels, and stored as JPEG data in browser storage. A failed storage write keeps the previous project intact. Selecting a cover does not upload it to a server. Project work media still uses URLs.
